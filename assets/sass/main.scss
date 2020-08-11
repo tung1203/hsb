@@ -1,8 +1,19 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 @import "base/base";
+@import "base/untilities";
 
+@import "components/sections";
 @import "components/buttons";
+@import "components/icon";
+@import "components/heading";
+@import "components/tool";
+@import "components/testimonial";
+@import "components/quote";
+@import "components/carousel";
+@import "components/feature";
+@import "components/post";
 
 @import "layout/header";
 

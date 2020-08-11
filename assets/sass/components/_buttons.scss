@@ -1,0 +1,19 @@
+.button {
+  font-size: $default-font-size;
+  font-family: "Poppins", "sans serif";
+  padding: 1.2rem;
+  border-radius: 10px;
+  display: inline-block;
+
+  &--semi-bold {
+    font-weight: 500;
+  }
+  &--purple {
+    background-color: $color-primary;
+    color: #fff;
+  }
+  &--green {
+    background-color: $color-secondary;
+    color: #fff;
+  }
+}

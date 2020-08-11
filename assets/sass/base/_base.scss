@@ -6,3 +6,19 @@
 html {
   font-size: 62.5%;
 }
+body {
+  font-family: "Poppins", sans-serif;
+  color: $color-grey-dark-1;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: $color-white;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

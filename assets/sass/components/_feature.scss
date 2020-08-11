@@ -1,0 +1,30 @@
+.feature {
+  padding: 3rem;
+  background: $color-white;
+  margin-top: 3rem;
+
+  @include respond(tab-port){
+    text-align: center;
+  }
+}
+.feature__icon::after {
+  display: inline-block;
+  @include absCenter;
+  font-size: 3.4rem;
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+}
+.feature__title {
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 0.8rem;
+  color: $color-grey-dark-3;
+  font-weight: bold;
+}
+.feature__text {
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: $color-grey-dark-1;
+}

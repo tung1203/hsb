@@ -1,0 +1,42 @@
+.header {
+  padding: 3.2rem 0;
+
+  &__nav {
+    display: flex;
+    margin-right: 3.65rem;
+
+    @include respond(tab-port) {
+      margin: 1rem 0;
+    }
+  }
+
+  &__logo {
+    width: 12.7rem;
+    height: auto;
+  }
+  & .button-group .button--purple {
+    margin-right: 1.5rem;
+  }
+}
+.header__nav ul {
+  @include respond(sm-phone) {
+    flex-direction: column;
+  }
+}
+.header__nav ul li {
+  margin-right: 5rem;
+  
+  @include respond(sm-phone) {
+    margin-right: 0 !important;
+    text-align: center;
+  }
+}
+
+.header__nav ul li:last-child {
+  margin-right: 0;
+}
+
+.header__nav ul li a {
+  color: #4f4b65;
+  font-size: 1.5rem;
+}

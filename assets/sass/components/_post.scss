@@ -1,0 +1,59 @@
+.post-container {
+  margin-top: 3.5rem;
+}
+.post {
+  display: block;
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px 1px #eee;
+  margin-bottom: 3rem;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__des {
+    position: relative;
+    padding: 1.3rem 0 1.2rem 1.5rem;
+  }
+
+  &__title {
+    font-family: "Poppins-Medium", sans-serif;
+    font-size: 1.5rem;
+    color: #2e2a41;
+  }
+
+  &__sub-title {
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: 1.2rem;
+    color: #7e7fa0;
+  }
+}
+.post__category {
+  position: absolute;
+  left: 0;
+  top: -19px;
+  width: 7.5rem;
+  height: 2.6rem;
+  background: $color-primary;
+  color: #fff;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-right: 14px solid blue;
+    position: absolute;
+    transform: rotate(-45deg);
+    right: -12px;
+    top: 0px;
+  }
+}

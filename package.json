@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass assets/sass/main.scss assets/css/style.css -w",
+    "watch:sass": "node-sass assets/sass assets/css -w",
     "devserver": "live-server",
-    "dev": "npm-run-all --parallel devserver watch:sass"
+    "dev": "npm-run-all --parallel watch:sass devserver"
   },
   "keywords": [],
   "author": "",

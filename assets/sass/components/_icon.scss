@@ -1,0 +1,97 @@
+.icon {
+  width: 7rem;
+  height: 7rem;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+
+  @include respond(tab-port) {
+    margin: auto;
+  }
+
+  &::before {
+    content: "\f004";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    @include absCenter;
+    display: inline-block;
+    font-size: 3.4rem;
+  }
+
+  &--heart {
+    background: #fff0f0;
+
+    &::before {
+      content: "\f004";
+      color: #fd9b9b;
+    }
+  }
+  &--clock {
+    background: #f3e9fd;
+
+    &::before {
+      content: "\f017";
+      color: #b06bf1;
+    }
+  }
+  &--store {
+    background: #e3f8fa;
+
+    &::before {
+      content: "\f54e";
+      color: #45ccdb;
+    }
+  }
+  &--setting {
+    background: #e5e6fd;
+
+    &::before {
+      content: "\f085";
+      color: #545cf0;
+    }
+  }
+  &--thumbs-up {
+    background: #fde9f3;
+
+    &::before {
+      content: "\f164";
+      color: #f16bac;
+    }
+  }
+  &--check {
+    background: #e3fae6;
+
+    &::before {
+      content: "\f00c";
+      color: #48de57;
+    }
+  }
+}
+
+.quote__icon {
+  width: 9.2rem;
+  height: 9.2rem;
+  border-radius: 50%;
+  background: #fdf1e7;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+
+  &::after {
+    content: "\f10e";
+    display: inline-block;
+    position: absolute;
+    font-size: 10rem;
+    color: $color-primary;
+    top: 0;
+    left: 32px;
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+  }
+}
