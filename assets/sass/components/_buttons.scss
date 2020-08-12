@@ -17,3 +17,13 @@
     color: #fff;
   }
 }
+.button-group {
+  @include respond(sm-phone) {
+    text-align: center;
+  }
+  & .button {
+    @include respond(sm-phone) {
+      margin: .3rem 0 !important;
+    }
+  }
+}

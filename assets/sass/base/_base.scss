@@ -22,3 +22,8 @@ ul {
   padding: 0;
   list-style: none;
 }
+.container {
+  @media (min-width: 1200px) {
+    max-width: 114rem;
+  }
+}

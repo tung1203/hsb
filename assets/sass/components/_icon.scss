@@ -1,7 +1,9 @@
 .icon {
   width: 7rem;
   height: 7rem;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   position: relative;
 
@@ -9,61 +11,52 @@
     margin: auto;
   }
 
-  &::before {
-    content: "\f004";
-    font-family: "Line Awesome Free";
-    font-weight: 900;
-    @include absCenter;
-    display: inline-block;
-    font-size: 3.4rem;
-  }
+  &--orange {
+    background: rgba($color: #fd9b9b, $alpha: 0.3);
 
-  &--heart {
-    background: #fff0f0;
-
-    &::before {
-      content: "\f004";
+    & .las {
       color: #fd9b9b;
+      font-size: 3.4rem;
     }
   }
-  &--clock {
-    background: #f3e9fd;
+  &--purple {
+    background: rgba($color: #b06bf1, $alpha: 0.3);
 
-    &::before {
-      content: "\f017";
+    & .las {
       color: #b06bf1;
+      font-size: 3.4rem;
     }
   }
-  &--store {
-    background: #e3f8fa;
+  &--blue {
+    background: rgba($color: #45ccdb, $alpha: 0.3);
 
-    &::before {
-      content: "\f54e";
+    & .las {
       color: #45ccdb;
+      font-size: 3.4rem;
     }
   }
-  &--setting {
-    background: #e5e6fd;
+  &--purple-1 {
+    background: rgba($color: #545cf0, $alpha: 0.3);
 
-    &::before {
-      content: "\f085";
+    & .las {
       color: #545cf0;
+      font-size: 3.4rem;
     }
   }
-  &--thumbs-up {
-    background: #fde9f3;
+  &--pink {
+    background: rgba($color: #f16bac, $alpha: 0.3);
 
-    &::before {
-      content: "\f164";
+    & .las {
       color: #f16bac;
+      font-size: 3.4rem;
     }
   }
-  &--check {
-    background: #e3fae6;
+  &--green {
+    background: rgba($color: #48de57, $alpha: 0.3);
 
-    &::before {
-      content: "\f00c";
+    & .las {
       color: #48de57;
+      font-size: 3.4rem;
     }
   }
 }
@@ -84,7 +77,7 @@
     font-size: 10rem;
     color: $color-primary;
     top: 0;
-    left: 32px;
+    left: 3.2rem;
     font-family: "Line Awesome Free";
     font-weight: 900;
     -webkit-font-smoothing: antialiased;
