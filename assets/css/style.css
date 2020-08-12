@@ -95,9 +95,14 @@ ul {
   .button-group {
     text-align: center; } }
 
+@media only screen and (max-width: 991.98px) {
+  .button-group {
+    display: flex;
+    flex-direction: revert; } }
+
 @media only screen and (max-width: 500px) {
   .button-group .button {
-    margin: .3rem 0 !important; } }
+    margin: 0.3rem 1rem !important; } }
 
 .icon {
   width: 7rem;
@@ -369,7 +374,7 @@ ul {
   .header__nav {
     display: flex;
     margin-right: 3.65rem; }
-    @media only screen and (max-width: 767.98px) {
+    @media only screen and (max-width: 991.98px) {
       .header__nav {
         margin: 1rem 0; } }
   .header__logo {
@@ -382,13 +387,31 @@ ul {
   .header .button-group .button--purple {
     margin-right: 1.5rem; }
 
-@media only screen and (max-width: 500px) {
-  .header__nav ul {
-    flex-direction: column; } }
+@media only screen and (max-width: 991.98px) {
+  .header__right {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    flex-direction: column;
+    font-size: 4rem;
+    transition: all 0.5s;
+    z-index: 1000;
+    background: rgba(97, 106, 232, 0.7);
+    overflow-y: scroll; }
+    .header__right.active {
+      right: 0; } }
+
+.header__nav ul {
+  display: flex; }
+  @media only screen and (max-width: 991.98px) {
+    .header__nav ul {
+      flex-direction: column; } }
 
 .header__nav ul li {
   margin-right: 5rem; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 991.98px) {
     .header__nav ul li {
       margin-right: 0 !important;
       text-align: center; } }
@@ -399,3 +422,32 @@ ul {
 .header__nav ul li a {
   color: #4f4b65;
   font-size: 1.5rem; }
+  @media only screen and (max-width: 991.98px) {
+    .header__nav ul li a {
+      flex-direction: column;
+      color: #fff; } }
+
+.nav-bar {
+  display: none;
+  font-size: 3rem;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+  color: #616ae8; }
+  @media only screen and (max-width: 991.98px) {
+    .nav-bar {
+      display: block; }
+      .nav-bar.de-active .la-bars {
+        display: none; } }
+
+.nav-bar--close {
+  position: fixed;
+  top: 1rem;
+  right: 3rem;
+  display: none;
+  color: #fff;
+  font-size: 3rem; }
+  .nav-bar--close.active {
+    display: block; }
