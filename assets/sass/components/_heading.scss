@@ -5,19 +5,14 @@
   padding: 0 4rem;
 
   &--title {
-    font-family: "Poppins-Bold", sans-serif;
     margin-bottom: 2rem;
     font-size: 3rem;
     color: $color-grey-dark-3;
+    font-weight: bold;
   }
   &--text {
-    font-family: "Poppins-Regular", sans-serif;
     font-size: 1.6rem;
     line-height: 2.6rem;
     color: $color-grey-dark-1;
-  }
-  &--poppins {
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
   }
 }
