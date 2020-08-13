@@ -1,13 +1,11 @@
 .quote {
     &__text {
-      font-family: "Poppins-Regular", sans-serif;
       line-height: 2.8rem;
       color: $color-grey-dark-1;
       margin-bottom: 3rem;
       font-size: 1.6rem;
     }
     &__author {
-      font-family: "Poppins-Bold", sans-serif;
       font-size: 1.4rem;
       margin-left: 3rem;
       position: relative;

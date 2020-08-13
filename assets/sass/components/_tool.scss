@@ -1,12 +1,11 @@
 .tool {
 
   &__title {
-    font-family: "Poppins-SemiBold", sans-serif;
     font-size: 2rem;
     position: relative;
     color: #2e2a41;
     margin-bottom: 2.9rem;
-    font-weight: bold;
+    font-weight: 600;
 
     &::before {
       content: "";
@@ -36,7 +35,6 @@
     }
   }
   &__text {
-    font-family: "Poppins-SemiBold", sans-serif;
     font-size: 1.5rem;
     color: #7e7fa0;
     line-height: 2.6rem;

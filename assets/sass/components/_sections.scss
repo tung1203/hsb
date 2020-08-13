@@ -1,5 +1,8 @@
 .section-tool {
   margin: 8rem 0;
+  & .container {
+    padding: 0;
+  }
 }
 .section-feature {
   padding: 8rem 0 9rem;
