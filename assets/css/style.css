@@ -24,7 +24,11 @@ ul {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 114rem; } }
+    max-width: 120rem; } }
+
+@media (min-width: 1300px) {
+  .container {
+    max-width: 130rem; } }
 
 .p-0 {
   padding: 0; }
@@ -45,22 +49,25 @@ ul {
     top: 0;
     left: 0; }
 
+.section {
+  position: relative; }
+
 .section-tool {
-  margin: 8rem 0; }
+  padding: 8rem 0;
+  position: relative; }
   @media only screen and (min-width: 991.98px) {
     .section-tool .container {
       padding: 0; } }
 
 .section-feature {
-  padding: 8rem 0 9rem;
-  margin: 0 1rem; }
+  padding: 8rem 0 9rem; }
 
 .section-post {
-  margin: 7.7rem 0 11.5rem 0; }
+  padding: 7.7rem 0 11.5rem 0; }
 
 .background {
   position: relative; }
-  .background--half:after {
+  .background--half {
     content: "";
     width: 50vw;
     height: 100%;
@@ -72,37 +79,39 @@ ul {
     z-index: -1;
     border-radius: 0 40px 40px 0; }
     @media only screen and (max-width: 1199.98px) {
-      .background--half:after {
+      .background--half {
         width: 100%;
         left: 0;
         border-radius: 20px; } }
-  .background--full-orange:after {
+  .background--full-orange {
     content: "";
-    width: 100%;
-    height: 100%;
     display: block;
     padding: 8rem 0 9rem;
     background: #fcf3ec;
     border-radius: 40px;
     position: absolute;
+    right: 15px;
+    left: 15px;
     top: 0;
-    left: 0;
+    bottom: 0;
     z-index: -1; }
+    @media only screen and (max-width: 991.98px) {
+      .background--full-orange {
+        right: 0;
+        left: 0; } }
 
 .button {
   font-size: 1.6rem;
   font-family: "Poppins", "sans serif";
   padding: 1.2rem;
   border-radius: 10px;
-  display: inline-block; }
-  .button--semi-bold {
-    font-weight: 500; }
+  display: inline-block;
+  font-weight: 500;
+  color: #fff; }
   .button--purple {
-    background-color: #616ae8;
-    color: #fff; }
+    background-color: #616ae8; }
   .button--green {
-    background-color: #20e5a7;
-    color: #fff; }
+    background-color: #20e5a7; }
 
 @media only screen and (max-width: 500px) {
   .button-group {
@@ -231,11 +240,11 @@ ul {
   line-height: 2.6rem; }
 
 .testimonial__content {
-  margin: 4rem 0 3.5rem 0;
+  padding: 4rem 0 8rem 0;
   position: relative;
-  height: 61.4rem;
-  display: flex;
-  align-items: center; }
+  margin-top: 7rem; }
+  .testimonial__content .background {
+    top: -2.5rem; }
 
 .testimonial__banner {
   width: 100%;
@@ -267,10 +276,15 @@ ul {
 .carousel-indicators {
   right: unset;
   bottom: -6rem;
-  margin: 0; }
+  margin: 0;
+  display: flex;
+  align-items: center; }
   @media only screen and (max-width: 1199.98px) {
     .carousel-indicators {
       right: 0; } }
+  @media only screen and (max-width: 1199.98px) {
+    .carousel-indicators {
+      bottom: -3rem; } }
   .carousel-indicators li {
     box-sizing: border-box;
     border: none;
@@ -287,7 +301,7 @@ ul {
   padding: 3rem;
   background: #fff;
   margin-top: 3rem;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px solid #F2F2F3; }
   @media only screen and (max-width: 767.98px) {
     .feature {
@@ -369,7 +383,6 @@ ul {
 .header {
   padding: 3.2rem 0; }
   .header__nav {
-    display: flex;
     margin-right: 2rem; }
     @media only screen and (max-width: 991.98px) {
       .header__nav {

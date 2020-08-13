@@ -4,17 +4,14 @@
   padding: 1.2rem;
   border-radius: 10px;
   display: inline-block;
+  font-weight: 500;
+  color: #fff;
 
-  &--semi-bold {
-    font-weight: 500;
-  }
   &--purple {
     background-color: $color-primary;
-    color: #fff;
   }
   &--green {
     background-color: $color-secondary;
-    color: #fff;
   }
 }
 .button-group {

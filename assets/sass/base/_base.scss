@@ -24,6 +24,9 @@ ul {
 }
 .container {
   @media (min-width: 1200px) {
-    max-width: 114rem;
+    max-width: 120rem;
+  }
+  @media (min-width: 1300px) {
+    max-width: 130rem;
   }
 }
