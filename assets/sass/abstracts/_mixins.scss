@@ -31,4 +31,9 @@
       @content;
     } //1800
   }
+  @if $breakpoint == m-big-tab-land {
+    @media only screen and (min-width: 991.98px) {
+      @content;
+    } //1800
+  }
 }

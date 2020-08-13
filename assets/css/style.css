@@ -35,10 +35,21 @@ ul {
 .text-primary {
   color: #616ae8 !important; }
 
+.aspect-ratio {
+  position: relative;
+  padding-top: 56.2%; }
+  .aspect-ratio img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+
 .section-tool {
   margin: 8rem 0; }
-  .section-tool .container {
-    padding: 0; }
+  @media only screen and (min-width: 991.98px) {
+    .section-tool .container {
+      padding: 0; } }
 
 .section-feature {
   padding: 8rem 0 9rem;

@@ -1,7 +1,10 @@
 .section-tool {
   margin: 8rem 0;
-  & .container {
-    padding: 0;
+  
+  @include respond(m-big-tab-land) {
+    & .container {
+      padding: 0;
+    }
   }
 }
 .section-feature {
