@@ -3,7 +3,7 @@
 
   &__nav {
     display: flex;
-    margin-right: 3.65rem;
+    margin-right: 2rem;
 
     @include respond(tab-land) {
       margin: 1rem 0;

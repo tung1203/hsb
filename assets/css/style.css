@@ -381,7 +381,7 @@ ul {
   padding: 3.2rem 0; }
   .header__nav {
     display: flex;
-    margin-right: 3.65rem; }
+    margin-right: 2rem; }
     @media only screen and (max-width: 991.98px) {
       .header__nav {
         margin: 1rem 0; } }
