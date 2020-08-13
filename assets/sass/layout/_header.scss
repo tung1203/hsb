@@ -43,15 +43,22 @@
     }
   }
 }
-.header__nav ul {
+.header__nav > ul {
   display: flex;
 
   @include respond(tab-land) {
     flex-direction: column;
+    width: 100%;
   }
 }
-.header__nav ul li {
-  margin-right: 5rem;
+.header__nav > ul > li {
+  position: relative;
+
+  &:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+  }
 
   @include respond(tab-land) {
     margin-right: 0 !important;
@@ -59,17 +66,85 @@
   }
 }
 
-.header__nav ul li:last-child {
+.header__nav > ul > li:last-child {
   margin-right: 0;
+  cursor: pointer;
 }
 
-.header__nav ul li a {
+.header__nav > ul > li > a {
   color: #4f4b65;
   font-size: 1.5rem;
+  padding: 0.5rem 2.5rem;
+  display: inline-block;
 
   @include respond(tab-land) {
     flex-direction: column;
     color: $color-white;
+  }
+}
+.sub-menu {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 1000;
+  background: #616ae8;
+
+  @include respond(tab-land) {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+
+  & > li {
+    border-bottom: 1px solid #fff;
+    position: relative;
+    width: 17rem;
+
+    @include respond(tab-land) {
+      padding: 1rem;
+      width: auto;
+    }
+
+    & > a {
+      color: #fff;
+      font-size: 1.5rem;
+      display: block;
+      padding: 1rem 0 1rem 1rem;
+    }
+
+    &:hover .mega-menu {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+.mega-menu {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: -0.1rem;
+  transition: all 0.3s;
+  background: #616ae8;
+  width: 100%;
+  right: -100%;
+  border: 1px solid $color-white;
+
+  @include respond(tab-land) {
+    display: none;
+  }
+
+  & > li {
+    border-bottom: 1px solid #fff;
+    width: 17rem;
+
+    & > a {
+      color: #fff;
+      font-size: 1.5rem;
+      display: block;
+      padding: 1rem 0 1rem 1rem;
+    }
   }
 }
 .nav-bar {
@@ -99,6 +174,7 @@
   display: none;
   color: #fff;
   font-size: 3rem;
+  z-index: 2000;
 
   &.active {
     display: block;
