@@ -336,7 +336,8 @@ ul {
   display: block;
   border-radius: 5px;
   box-shadow: 1px 1px 20px 1px #eee;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  background: #fff; }
   .post__image {
     width: 100%;
     height: auto; }
@@ -420,16 +421,22 @@ ul {
       flex-direction: column;
       width: 100%; } }
 
-.header__nav > ul > li {
+.header__nav > ul > li:not(.has-mega-menu) {
   position: relative; }
-  .header__nav > ul > li:hover .sub-menu {
-    visibility: visible;
-    opacity: 1;
-    height: auto; }
-  @media only screen and (max-width: 991.98px) {
-    .header__nav > ul > li {
-      margin-right: 0 !important;
-      text-align: center; } }
+
+.header__nav > ul > li:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  height: auto; }
+
+.header__nav > ul > li:hover .mega-menu {
+  visibility: visible;
+  opacity: 1; }
+
+@media only screen and (max-width: 991.98px) {
+  .header__nav > ul > li {
+    margin-right: 0 !important;
+    text-align: center; } }
 
 .header__nav > ul > li:last-child {
   margin-right: 0;
@@ -471,11 +478,11 @@ ul {
       font-size: 1.5rem;
       display: block;
       padding: 1rem 0 1rem 1rem; }
-    .sub-menu > li:hover .mega-menu {
+    .sub-menu > li:hover .sub-menu-1 {
       visibility: visible;
       opacity: 1; }
 
-.mega-menu {
+.sub-menu-1 {
   position: absolute;
   visibility: hidden;
   opacity: 0;
@@ -486,16 +493,45 @@ ul {
   right: -100%;
   border: 1px solid #fff; }
   @media only screen and (max-width: 991.98px) {
-    .mega-menu {
+    .sub-menu-1 {
       display: none; } }
-  .mega-menu > li {
+  .sub-menu-1 > li {
     border-bottom: 1px solid #fff;
     width: 17rem; }
-    .mega-menu > li > a {
+    .sub-menu-1 > li > a {
       color: #fff;
       font-size: 1.5rem;
       display: block;
       padding: 1rem 0 1rem 1rem; }
+
+.mega-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 0; }
+  .mega-menu__wrap {
+    background: #e9ecef;
+    border-radius: 10px;
+    display: flex; }
+  .mega-menu__sidebar {
+    width: 20%;
+    padding: 1.5rem; }
+    .mega-menu__sidebar ul li {
+      font-size: 1.5rem;
+      border-bottom: 1px solid #7e7fa0;
+      text-transform: capitalize;
+      padding: 0.5rem;
+      cursor: pointer; }
+  .mega-menu__content-list {
+    width: 80%; }
+  .mega-menu__content {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%; }
+    .mega-menu__content > * {
+      margin: 1rem; }
 
 .nav-bar {
   display: none;
