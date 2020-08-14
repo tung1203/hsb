@@ -50,10 +50,22 @@
     width: 100%;
   }
 }
-.header__nav > ul > li:not(.has-mega-menu) {
-  position: relative;
+@include respond(m-big-tab-land) {
+  .header__nav > ul > li.has-mega-menu {
+    position: static;
+
+    & .sub-menu {
+      display: none;
+    }
+  }
+}
+.header__nav > ul > li.has-mega-menu .sub-menu {
+  @include respond(tab-land) {
+    display: block;
+  }
 }
 .header__nav > ul > li {
+  position: relative;
   &:hover .sub-menu {
     visibility: visible;
     opacity: 1;
@@ -160,6 +172,10 @@
   width: 100%;
   z-index: 1000;
   padding: 1.5rem 0;
+
+  @include respond(tab-land) {
+    display: none;
+  }
 
   &__wrap {
     background: #e9ecef;
